@@ -4,13 +4,14 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #fff;
   --color-1-yellow: #fbffa7;
   --color-2-orange: #ff764d;
   --color-3-ligthblue: #b1c5ff;
   --color-4-violet: #d5b3ff;
   --color-green: #b6ffc0;
   --color-blue: #0000ff;
+  --color-dark-gray: #808D8F;
 }
 *{
   margin: 0;
