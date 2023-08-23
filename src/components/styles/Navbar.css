@@ -9,6 +9,7 @@
   height: 60px;
   align-items: center;
   border-bottom: 1px solid #ddd;
+  background: #fff;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -80,9 +81,11 @@ a{
 }
 .navbar-top{
   display: flex;
+  position:  inherit;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin-bottom: 20px;
 }
 .navbar-top1{
   max-width: 200px;
@@ -98,4 +101,9 @@ a{
 }
 .navbar-li :active{
   color: var(--color-orange);
+}
+.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in;
+  display: none;
 }
