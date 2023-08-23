@@ -5,13 +5,14 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #fff;
-  --color-1-yellow: #fbffa7;
-  --color-2-orange: #ff764d;
-  --color-3-ligthblue: #b1c5ff;
-  --color-4-violet: #d5b3ff;
+  --color-yellow: #fbffa7;
+  --color-orange: #FB594A;
+  --color-ligthblue: #b1c5ff;
+  --color-violet: #d5b3ff;
   --color-green: #b6ffc0;
   --color-blue: #0000ff;
-  --color-dark-gray: #808D8F;
+  --color-dark-gray: #494949;
+  --color-black: #000000;
 }
 *{
   margin: 0;
