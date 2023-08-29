@@ -1,31 +1,45 @@
 import "./styles/Navbar.css"
 import { FaPlus } from "react-icons/fa"
-import { useState, useEffect } from "react"
-
-
+import { useState, useEffect, useRef } from "react"
 
 const Navbar = () => {
-  const [showTopNav, setShowTopNav] = useState(true);
-  useEffect(() => {
-    let lastScrollTop = 0;
-  
-    const handleScroll = () => {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop){
-        setShowTopNav(false); // oculta navbar-top
-      } else {
-        setShowTopNav(true); // muestra navbar-top
-      }
-      lastScrollTop = scrollTop;
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const dropdownRef = useRef(null)
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen)
+  }
+  const clickOutside = (e) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      setIsDropdownOpen(false)
     }
-  
-    window.addEventListener("scroll", handleScroll);
-  
+  }
+  useEffect(() => {
+    document.addEventListener("mousedown", clickOutside)
+    return () => {
+      document.removeEventListener("mousedown", clickOutside)
+    }
+  }, [])
+  const [showTopNav, setShowTopNav] = useState(true)
+  useEffect(() => {
+    let lastScrollTop = 0
+
+    const handleScroll = () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      if (scrollTop > lastScrollTop) {
+        setShowTopNav(false) // oculta navbar-top
+      } else {
+        setShowTopNav(true) // muestra navbar-top
+      }
+      lastScrollTop = scrollTop
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
     // Limpia el event listener al desmontar el componente
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll)
     }
-  }, []);
+  }, [])
   return (
     <nav className="navbar">
       <div className="navbar-sticky">
@@ -46,8 +60,17 @@ const Navbar = () => {
         <div className="container_links_navbar">
           <div className="navbar_links_left">
             <ul className="ul-navbar">
-              <li className="li-navbar">
-                <a href="#live">Live</a>
+              <li className="li-navbar" ref={dropdownRef}>
+                <a href="#live" onClick={toggleDropdown}>
+                  Live
+                </a>
+                {isDropdownOpen && (
+                  <div className="dropdown-menu">
+                    <a href="#">Opción 1</a>
+                    <a href="#">Opción 2</a>
+                    <a href="#">Opción 3</a>
+                  </div>
+                )}
               </li>
               <li className="li-navbar">
                 <a href="#push">Push</a>
@@ -87,7 +110,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`navbar-top ${!showTopNav ? 'hidden' : ''}`}>
+      <div className={`navbar-top ${!showTopNav ? "hidden" : ""}`}>
         <ul className="navbar-top1">
           <li className="li-navbar">
             <a href="#about">About</a>
