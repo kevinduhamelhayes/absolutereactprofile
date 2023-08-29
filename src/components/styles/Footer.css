@@ -3,13 +3,16 @@
   background-color: var(--color-white);
   color: var(--color-black);
   font-family: Arial, sans-serif;
-  padding: 20px 0;
+  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-height: 250px;
+  width: 100%;
+
 }
 
 .footer-container {
   max-width: 80%;
-  padding: 20px;
+
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -82,11 +85,12 @@
 .footer-bottom-left-input-button {
   background-color: var(--color-blue);
   color: #ddd;
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 700;
+  width: 400px;
+  padding: 10px;
   border: none;
-  padding: 15px 25px;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 15px 15px 15px 15px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
