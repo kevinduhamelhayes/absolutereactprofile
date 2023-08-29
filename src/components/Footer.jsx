@@ -49,7 +49,8 @@ const Footer = () => {
             <div className="footer-top-right-title">Legal Info</div>
             <div className="footer-top-right-subtitle">
               <a className="a-footer" href="#agreement">
-                This landing page is a crated by Kevin Duhamel for you <FaHeart color="#FF0000" size={20} />
+                This landing page is a crated by Kevin Duhamel for you{" "}
+                <FaHeart color="#FF0000" size={20} />
               </a>
               {/*
               <a className="a-footer" href="#privacy">
@@ -72,21 +73,28 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-        <div className="footer-bottom">
-    <div className="footer-bottom-left">
-        <button 
-            className="footer-bottom-left-input-button"
-            onClick={() => window.location.href = "mailto:kevinduhamelh@gmail.com"}
-        >
-            Contact Me
-        </button>
-    </div>
-</div>
+          <div className="footer-bottom">
+            <div className="footer-bottom-left">
+              <button
+                className="footer-bottom-left-input-button"
+                onClick={() =>
+                  (window.location.href = "mailto:kevinduhamelh@gmail.com")
+                }
+              >
+                Contact Me
+              </button>
+            </div>
+          </div>
 
           <div className="footer-bottom-right">
             <div className="footer-bottom-right-title">Follow Me</div>
             <div className="footer-bottom-right-subtitle">
-              <a className="a-footer" href="#facebook">
+              <a
+                className="a-footer"
+                href="https://www.facebook.com/kevinduhamelhayes/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-facebook-f">
                   <FaFacebook color="#435998" size={40} />
                 </i>
@@ -100,18 +108,33 @@ const Footer = () => {
                 <i className="fab fa-youtube"> <FaYoutube color="#CA1C25" size={40}/></i>
               </a>
 */}
-              <a className="a-footer" href="#instagram">
+              <a
+                className="a-footer"
+                href="https://github.com/kevinduhamelhayes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-instagram">
                   <FaGithub color="#9733F7" size={40} />
                 </i>
               </a>
-              <a className="a-footer" href="#instagram">
+              <a
+                className="a-footer"
+                href="https://www.instagram.com/kevinduhamelhayes/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-instagram">
                   <FaInstagram color="#FF891E" size={40} />
                 </i>
               </a>
 
-              <a className="a-footer" href="#linkedin">
+              <a
+                className="a-footer"
+                href="https://www.linkedin.com/in/kevin-duhamel-hayes/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedin color="#0A66C2" size={40} />
               </a>
               {/*

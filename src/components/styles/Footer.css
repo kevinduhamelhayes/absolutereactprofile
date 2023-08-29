@@ -1,18 +1,15 @@
-
 .footer {
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: #1a1a1a; /* Cambiado a oscuro para seguir la línea de diseño */
+  color: #FFFFFF; /* Cambiado a blanco para contraste con el fondo oscuro */
   font-family: Arial, sans-serif;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   max-height: 250px;
   width: 100%;
-
 }
 
 .footer-container {
   max-width: 80%;
-
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -29,21 +26,21 @@
 .footer-top-right,
 .footer-bottom-left,
 .footer-bottom-right {
-  width: 46%; /* Aproximadamente la mitad del espacio, con un pequeño margen */
+  width: 46%;
 }
 
 .a-footer {
-  color: var(--color-black);
+  color: #FFFFFF; /* Cambiado a blanco para contraste con el fondo oscuro */
   text-decoration: none;
   margin-right: 15px;
   transition: color 0.3s ease-in-out;
 }
 
 .a-footer:hover {
+  color: #FF4500; /* Cambiado a naranja para seguir la línea de diseño */
   cursor: pointer;
 }
 
-/* Estilos para los títulos y subtítulos */
 .footer-top-left-title,
 .footer-top-right-title,
 .footer-bottom-left-title,
@@ -60,46 +57,42 @@
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
+  color: #999999; /* Un gris más claro para mejorar la legibilidad */
 }
 
-/* Estilos para el formulario de suscripción */
 .footer-bottom-left-input {
   display: flex;
   align-items: center;
-
 }
 
 .footer-bottom-left-input-text {
   flex: 1;
   padding: 10px;
-  border: 3px solid var(--color-dark-gray);
+  border: 3px solid #FF4500; /* Cambiado a naranja para seguir la línea de diseño */
   border-radius: 5px 0 0 5px;
   font-size: 18px;
   font-weight: 700;
-  color: var(--color-dark-gray);
-  background-color: var(--color-white);
-
-
+  color: #FF4500; /* Cambiado a naranja para seguir la línea de diseño */
+  background-color: #1a1a1a; /* Mantenido oscuro para seguir la línea de diseño */
 }
 
 .footer-bottom-left-input-button {
-  background-color: var(--color-blue);
-  color: #ddd;
+  background-color: #FF4500; /* Cambiado a naranja para seguir la línea de diseño */
+  color: #FFFFFF; /* Cambiado a blanco para contraste con el fondo oscuro */
   font-size: 25px;
   font-weight: 700;
   width: 400px;
   padding: 10px;
   border: none;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
 .footer-bottom-left-input-button:hover {
-  background-color: var(--color-orange);
+  background-color: #FF6347; /* Un tono más claro de naranja para el efecto hover */
 }
 
-/* Estilos para los íconos de redes sociales */
 .fab {
   font-size: 18px;
   margin-right: 10px;
@@ -107,11 +100,13 @@
 }
 
 .fab:hover {
-  color: #fff;
+  color: #FF4500; /* Cambiado a naranja para seguir la línea de diseño */
 }
-.footer-bottom-left-subtitle{
+
+.footer-bottom-left-subtitle {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 20px;
-  color: var(--color-dark-gray);
+  color: #999999; /* Un gris más claro para mejorar la legibilidad */
 }
+
