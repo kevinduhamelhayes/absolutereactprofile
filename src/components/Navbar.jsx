@@ -1,40 +1,14 @@
 import "./styles/Navbar.css"
-import { useState, useEffect } from "react"
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa"
 
 const Navbar = () => {
-  const [showTopNav, setShowTopNav] = useState(true)
-
-  useEffect(() => {
-    let lastScrollTop = 0
-
-    const handleScroll = () => {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop
-      if (scrollTop > lastScrollTop) {
-        setShowTopNav(false) 
-      } else {
-        setShowTopNav(true) 
-      }
-      lastScrollTop = scrollTop
-    }
-
-    window.addEventListener("scroll", handleScroll)
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
   return (
     <nav className="navbar">
-      <div className={`navbar-sticky ${!showTopNav ? "hidden" : ""}`}>
+      <div className="navbar-sticky">
         <div className="navbar__logo">
-          {/* Aquí puedes añadir un logo o imagen de perfil si lo deseas */}
-          <h1>Kevin Duhamel</h1>
-        </div>
-        <div className="container_links_navbar">
           <ul className="ul-navbar">
-            <li className="li-navbar">
-              <a href="#home">Home</a>
+          <li className="li-navbar">
+              <a href="#home">Kevin Duhamel</a>
             </li>
             <li className="li-navbar">
               <a href="#stack">Stack</a>
@@ -42,8 +16,64 @@ const Navbar = () => {
             <li className="li-navbar">
               <a href="#projects">Projects</a>
             </li>
+          </ul>
+        </div>
+        <div className="container_links_navbar">
+          <ul className="ul-navbar">
+            
+            <li>
+              {" "}
+              <a
+                className="a-footer"
+                href="https://www.facebook.com/kevinduhamelhayes/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-facebook-f">
+                  <FaFacebook color="#435998" size={30} />
+                </i>
+              </a>
+            </li>
+            <li>
+              <a
+                className="a-footer"
+                href="https://www.instagram.com/kevinduhamelhayes/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-instagram">
+                  <FaInstagram color="#FF891E" size={30} />
+                </i>
+              </a>
+            </li>
+            <li>
+              <a
+                className="a-footer"
+                href="https://www.linkedin.com/in/kevin-duhamel-hayes/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin color="#0A66C2" size={30} />
+              </a>
+            </li>
+            <li>
+              <a
+                className="a-footer"
+                href="https://github.com/kevinduhamelhayes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-instagram">
+                  <FaGithub color="#9733F7" size={30} />
+                </i>
+              </a>
+            </li>
             <li className="li-navbar">
-              <button onClick={() => (window.location.href = "mailto:kevinduhamelh@gmail.com")}>
+              <button
+                onClick={() =>
+                  (window.location.href = "mailto:kevinduhamelh@gmail.com")
+                }
+              >
                 Contact Me
               </button>
             </li>
