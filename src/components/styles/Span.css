@@ -1,27 +1,46 @@
 .span-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f7f7f7; /* Un color de fondo claro para contraste */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.image-section {
-  display: flex;
-  gap: 20px; /* Espacio entre imágenes */
-  margin-bottom: 20px; /* Espacio entre las imágenes y los iconos */
-}
-
-.span-image {
-  width: auto;
-  max-height: 150px;
-  border-radius: 10px;
+h4 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
 }
 
 .icon-section {
   display: flex;
-  gap: 20px; /* Espacio entre íconos */
-  flex-wrap: wrap; /* Si hay muchos íconos, permite que se envuelvan a la siguiente línea */
+  flex-wrap: wrap;
+  gap: 1rem;
 }
+
+/* Estilo general para los íconos */
+.icon-section > * {
+  margin-right: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.icon-section > *:hover {
+  transform: translateY(-4px);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .span-container {
+    padding: 1rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
