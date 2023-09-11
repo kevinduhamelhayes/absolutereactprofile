@@ -4,7 +4,6 @@ import Hero from "./components/Hero"
 //import Modal from "./components/Modal"
 import Navbar from "./components/Navbar"
 import Span from "./components/Span"
-import "./index.css"
 
 const App = () => {
   return (

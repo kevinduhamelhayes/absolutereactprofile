@@ -27,7 +27,7 @@ import {
 const Span = () => {
   return (
     <div className="span-container">
-      <h4>Frontend</h4>
+      <h4 className="bg-red-700 text-red-400">Frontend</h4>
       <div className="icon-section">
         <FaJsSquare color="#F0DB4F" size={50} />
         <FaReact color="#61DAFB" size={50} />
@@ -39,7 +39,7 @@ const Span = () => {
       </div>
 
       <h4>Backend</h4>
-      <div className="icon-section">
+      <div className="p-2 text-red-500">
         <DiNodejs color="#68A063" size={50} />
         <DiPython color="#3776AB" size={50} />
       </div>
